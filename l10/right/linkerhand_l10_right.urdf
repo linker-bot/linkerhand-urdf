@@ -49,7 +49,7 @@
     <parent link="hand_base_link" />
     <child link="thumb_metacarpals_base1" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.785" upper="0.785" effort="100" velocity="1" />
+    <limit lower="-0.785" upper="0.785" effort="12" velocity="2.6" />
   </joint>
   <link name="thumb_metacarpals_base2">
     <inertial>
@@ -78,7 +78,7 @@
     <parent link="thumb_metacarpals_base1" />
     <child link="thumb_metacarpals_base2" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.57" effort="100" velocity="1" />
+    <limit lower="0" upper="1.57" effort="12" velocity="2.6" />
   </joint>
   <link name="thumb_metacarpals">
     <inertial>
@@ -107,7 +107,7 @@
     <parent link="thumb_metacarpals_base2" />
     <child link="thumb_metacarpals" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="0.5286" effort="100" velocity="1" />
+    <limit lower="0" upper="0.5286" effort="12" velocity="2.6" />
     
   </joint>
   <link name="thumb_proximal">
@@ -137,7 +137,7 @@
     <parent link="thumb_metacarpals" />
     <child link="thumb_proximal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.0467" effort="100" velocity="1" />
+    <limit lower="0" upper="1.0467" effort="12" velocity="2.6" />
     <mimic joint="thumb_cmc_pitch" multiplier="2.24" offset="0" />
   </joint>
   <link name="thumb_distal">
@@ -167,7 +167,7 @@
     <parent link="thumb_proximal" />
     <child link="thumb_distal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.256" effort="100" velocity="1" />
+    <limit lower="0" upper="1.256" effort="12" velocity="2.6" />
     <mimic joint="thumb_mcp" multiplier="1.0625" offset="0" />
   </joint>
   <link name="index_metacarpals">
@@ -197,7 +197,7 @@
     <parent link="hand_base_link" />
     <child link="index_metacarpals" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.36" upper="0.36" effort="100" velocity="1" />
+    <limit lower="-0.36" upper="0.36" effort="12" velocity="2.6" />
   </joint>
   <link name="index_proximal">
     <inertial>
@@ -226,7 +226,7 @@
     <parent link="index_metacarpals" />
     <child link="index_proximal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.325" effort="100" velocity="1" />
+    <limit lower="0" upper="1.325" effort="12" velocity="2.6" />
   </joint>
   <link name="index_middle">
     <inertial>
@@ -255,7 +255,7 @@
     <parent link="index_proximal" />
     <child link="index_middle" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.57" effort="100" velocity="1" />
+    <limit lower="0" upper="1.57" effort="12" velocity="2.6" />
     <mimic joint="index_mcp_pitch" multiplier="1.18" offset="0" />
   </joint>
   <link name="index_distal">
@@ -285,7 +285,7 @@
     <parent link="index_middle" />
     <child link="index_distal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1" effort="100" velocity="1" />
+    <limit lower="0" upper="1" effort="12" velocity="2.6" />
     <mimic joint="index_pip" multiplier="0.635" offset="0" />
   </joint>
   <link name="middle_proximal">
@@ -315,7 +315,7 @@
     <parent link="hand_base_link" />
     <child link="middle_proximal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.325" effort="100" velocity="1" />
+    <limit lower="0" upper="1.325" effort="12" velocity="2.6" />
   </joint>
   <link name="middle_middle">
     <inertial>
@@ -344,7 +344,7 @@
     <parent link="middle_proximal" />
     <child link="middle_middle" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.57" effort="100" velocity="1" />
+    <limit lower="0" upper="1.57" effort="12" velocity="2.6" />
     <mimic joint="middle_mcp_pitch" multiplier="1.18" offset="0" />
   </joint>
   <link name="middle_distal">
@@ -374,7 +374,7 @@
     <parent link="middle_middle" />
     <child link="middle_distal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1" effort="100" velocity="1" />
+    <limit lower="0" upper="1" effort="12" velocity="2.6" />
     <mimic joint="middle_pip" multiplier="0.635" offset="0" />
   </joint>
   <link name="ring_metacarpals">
@@ -404,7 +404,7 @@
     <parent link="hand_base_link" />
     <child link="ring_metacarpals" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.36" upper="0.36" effort="100" velocity="1" />
+    <limit lower="-0.36" upper="0.36" effort="12" velocity="2.6" />
   </joint>
   <link name="ring_proximal">
     <inertial>
@@ -433,7 +433,7 @@
     <parent link="ring_metacarpals" />
     <child link="ring_proximal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.325" effort="100" velocity="1" />
+    <limit lower="0" upper="1.325" effort="12" velocity="2.6" />
   </joint>
   <link name="ring_middle">
     <inertial>
@@ -462,7 +462,7 @@
     <parent link="ring_proximal" />
     <child link="ring_middle" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.57" effort="100" velocity="1" />
+    <limit lower="0" upper="1.57" effort="12" velocity="2.6" />
     <mimic joint="ring_mcp_pitch" multiplier="1.18" offset="0" />
   </joint>
   <link name="ring_distal">
@@ -492,7 +492,7 @@
     <parent link="ring_middle" />
     <child link="ring_distal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1" effort="100" velocity="1" />
+    <limit lower="0" upper="1" effort="12" velocity="2.6" />
     <mimic joint="ring_pip" multiplier="0.635" offset="0" />
   </joint>
   <link name="pinky_metacarpals">
@@ -522,7 +522,7 @@
     <parent link="hand_base_link" />
     <child link="pinky_metacarpals" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.36" upper="0.36" effort="100" velocity="1" />
+    <limit lower="-0.36" upper="0.36" effort="12" velocity="2.6" />
   </joint>
   <link name="pinky_proximal">
     <inertial>
@@ -551,7 +551,7 @@
     <parent link="pinky_metacarpals" />
     <child link="pinky_proximal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.325" effort="100" velocity="1" />
+    <limit lower="0" upper="1.325" effort="12" velocity="2.6" />
   </joint>
   <link name="pinky_middle">
     <inertial>
@@ -580,7 +580,7 @@
     <parent link="pinky_proximal" />
     <child link="pinky_middle" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1.57" effort="100" velocity="1" />
+    <limit lower="0" upper="1.57" effort="12" velocity="2.6" />
     <mimic joint="pinky_mcp_pitch" multiplier="1.18" offset="0" />
   </joint>
   <link name="pinky_distal">
@@ -610,7 +610,7 @@
     <parent link="pinky_middle" />
     <child link="pinky_distal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1" effort="100" velocity="1" />
+    <limit lower="0" upper="1" effort="12" velocity="2.6" />
     <mimic joint="pinky_pip" multiplier="0.635" offset="0" />
   </joint>
 </robot>
