@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="likerhand_o7t_left.urdf">
+  <link
+    name="hand_base_link">
+    <inertial>
+      <origin
+        xyz="-0.0042500911837508 0.00085680978297864 0.0748400307377518"
+        rpy="0 0 0" />
+      <mass
+        value="0.225124072566834" />
+      <inertia
+        ixx="0.000307215791868368"
+        ixy="-2.62393594835236E-06"
+        ixz="-6.32980141818779E-06"
+        iyy="0.000204974944876431"
+        iyz="3.62195604578169E-06"
+        izz="0.000138551118704521" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/hand_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/hand_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="thumb_metacarpals_base1">
+    <inertial>
+      <origin
+        xyz="0.0221868758326095 -9.48625995070285E-06 -0.00324883171979469"
+        rpy="0 0 0" />
+      <mass
+        value="0.0115244960032222" />
+      <inertia
+        ixx="3.08657221406028E-06"
+        ixy="2.39576891596808E-09"
+        ixz="3.1376074283793E-07"
+        iyy="4.37069643376973E-06"
+        iyz="1.08562146715063E-09"
+        izz="1.95654132689649E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals_base1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals_base1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_roll"
+    type="revolute">
+    <origin
+      xyz="-0.016939 -0.018427 0.057465"
+      rpy="0 0 0" />
+    <parent
+      link="hand_base_link" />
+    <child
+      link="thumb_metacarpals_base1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_metacarpals_base2">
+    <inertial>
+      <origin
+        xyz="0.000732158506501421 -0.00116891771237498 -0.00114043413649958"
+        rpy="0 0 0" />
+      <mass
+        value="0.0194012482707974" />
+      <inertia
+        ixx="3.11023242394477E-06"
+        ixy="7.00345951479998E-07"
+        ixz="-3.45895864415883E-08"
+        iyy="2.43362631795933E-06"
+        iyz="5.55699212497148E-08"
+        izz="2.77691812675186E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals_base2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals_base2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_yaw"
+    type="revolute">
+    <origin
+      xyz="0.029224 0.00012028 0.0020117"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpals_base1" />
+    <child
+      link="thumb_metacarpals_base2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_metacarpals">
+    <inertial>
+      <origin
+        xyz="0.00175928357967789 5.98422066862003E-05 0.0251802708380432"
+        rpy="0 0 0" />
+      <mass
+        value="0.0177522528853587" />
+      <inertia
+        ixx="2.97620250609612E-06"
+        ixy="-1.75606406726447E-10"
+        ixz="8.88206077184725E-08"
+        iyy="4.02119583080426E-06"
+        iyz="-5.14340714112944E-10"
+        izz="1.61792798866592E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_cmc_pitch"
+    type="revolute">
+    <origin
+      xyz="0.015425 -0.024408 -0.0034929"
+      rpy="0 -1.1075 2.1313" />
+    <parent
+      link="thumb_metacarpals_base2" />
+    <child
+      link="thumb_metacarpals" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.5285"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="thumb_proximal">
+    <inertial>
+      <origin
+        xyz="-0.000134514656695575 -6.2245440023978E-06 0.0155657254696806"
+        rpy="0 0 0" />
+      <mass
+        value="0.00522318022645753" />
+      <inertia
+        ixx="9.25272679777908E-07"
+        ixy="8.8733597010757E-12"
+        ixz="1.11610235976856E-07"
+        iyy="8.23288983910426E-07"
+        iyz="-4.13122351934137E-11"
+        izz="4.09240194803836E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_mcp"
+    type="revolute">
+    <origin
+      xyz="0.0049422 0 0.050268"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_metacarpals" />
+    <child
+      link="thumb_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.186"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="thumb_cmc_pitch"
+      multiplier="2.24"
+      offset="0" />
+  </joint>
+  <link
+    name="thumb_distal">
+    <inertial>
+      <origin
+        xyz="-0.0012828823583598 8.66398637835997E-06 0.0121296195661648"
+        rpy="0 0 0" />
+      <mass
+        value="0.0059927321340954" />
+      <inertia
+        ixx="3.54974702508419E-07"
+        ixy="2.25470558333717E-10"
+        ixz="1.02705988899827E-07"
+        iyy="3.68385773825653E-07"
+        iyz="5.55834292489291E-11"
+        izz="2.80219721351633E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_ip"
+    type="revolute">
+    <origin
+      xyz="-0.0040391 0 0.036444"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_proximal" />
+    <child
+      link="thumb_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.256"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="thumb_cmc_pitch"
+      multiplier="2.38"
+      offset="0" />
+  </joint>
+  <link
+    name="index_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00325184022307572 -5.73777268036979E-05 0.0195194519488432"
+        rpy="0 0 0" />
+      <mass
+        value="0.00304918852223857" />
+      <inertia
+        ixx="2.70561430617686E-07"
+        ixy="4.04016903074442E-10"
+        ixz="3.98546481487138E-08"
+        iyy="2.61413228132876E-07"
+        iyz="1.27694129235523E-09"
+        izz="1.43213403424246E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.0010899 -0.027484 0.1273"
+      rpy="0.017453 0 0" />
+    <parent
+      link="hand_base_link" />
+    <child
+      link="index_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.325"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="index_middle">
+    <inertial>
+      <origin
+        xyz="-0.00220166605939472 0.000343544227875414 0.0115244041402905"
+        rpy="0 0 0" />
+      <mass
+        value="0.00325826222115125" />
+      <inertia
+        ixx="2.84903328684065E-07"
+        ixy="-1.91220675187704E-09"
+        ixz="4.46236233645146E-08"
+        iyy="2.60287147871894E-07"
+        iyz="4.72747608453597E-09"
+        izz="1.33240305815556E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_pip"
+    type="revolute">
+    <origin
+      xyz="-0.0033727 0 0.03351"
+      rpy="0 0 0" />
+    <parent
+      link="index_proximal" />
+    <child
+      link="index_middle" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="index_mcp_pitch"
+      multiplier="1.18"
+      offset="0" />
+  </joint>
+  <link
+    name="index_distal">
+    <inertial>
+      <origin
+        xyz="0.000205192768436009 5.00807908632439E-05 0.0116640269704398"
+        rpy="0 0 0" />
+      <mass
+        value="0.00386914599414329" />
+      <inertia
+        ixx="2.13092899098193E-07"
+        ixy="-4.43659936071928E-10"
+        ixz="4.32266496521949E-08"
+        iyy="2.07077941254489E-07"
+        iyz="3.00868537950707E-09"
+        izz="1.20295876651976E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_dip"
+    type="revolute">
+    <origin
+      xyz="-0.0050438 0 0.025752"
+      rpy="0 0 0" />
+    <parent
+      link="index_middle" />
+    <child
+      link="index_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="index_mcp_pitch"
+      multiplier="0.7493"
+      offset="0" />
+  </joint>
+  <link
+    name="middle_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00325186288012639 -5.73454626350833E-05 0.0195195889004449"
+        rpy="0 0 0" />
+      <mass
+        value="0.00304916574973766" />
+      <inertia
+        ixx="2.70554051207578E-07"
+        ixy="4.03711836861357E-10"
+        ixz="3.98537937936656E-08"
+        iyy="2.61406398624621E-07"
+        iyz="1.278882248156E-09"
+        izz="1.43213023085845E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.0030759 -0.0081771 0.1323"
+      rpy="0 0 0" />
+    <parent
+      link="hand_base_link" />
+    <child
+      link="middle_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.325"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="middle_middle">
+    <inertial>
+      <origin
+        xyz="-0.00220166778232146 0.000343539248883085 0.0115243995791403"
+        rpy="0 0 0" />
+      <mass
+        value="0.00325826090000982" />
+      <inertia
+        ixx="2.84903242801029E-07"
+        ixy="-1.91226349169516E-09"
+        ixz="4.46235974644869E-08"
+        iyy="2.60287108562876E-07"
+        iyz="4.72757371001898E-09"
+        izz="1.33240236728541E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_pip"
+    type="revolute">
+    <origin
+      xyz="-0.0033727 0 0.03351"
+      rpy="0 0 0" />
+    <parent
+      link="middle_proximal" />
+    <child
+      link="middle_middle" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="middle_mcp_pitch"
+      multiplier="1.18"
+      offset="0" />
+  </joint>
+  <link
+    name="middle_distal">
+    <inertial>
+      <origin
+        xyz="0.000205178072639707 5.00682687798182E-05 0.0116640598651227"
+        rpy="0 0 0" />
+      <mass
+        value="0.00386915654397527" />
+      <inertia
+        ixx="2.13094283443978E-07"
+        ixy="-4.4383622725015E-10"
+        ixz="4.32271566193733E-08"
+        iyy="2.07079487486431E-07"
+        iyz="3.00914543235198E-09"
+        izz="1.20296117946962E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_dip"
+    type="revolute">
+    <origin
+      xyz="-0.0050438 0 0.025752"
+      rpy="0 0 0" />
+    <parent
+      link="middle_middle" />
+    <child
+      link="middle_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="middle_mcp_pitch"
+      multiplier="0.7493"
+      offset="0" />
+  </joint>
+  <link
+    name="ring_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00325188639109948 -5.73091636886791E-05 0.0195197425412056"
+        rpy="0 0 0" />
+      <mass
+        value="0.00304914173423174" />
+      <inertia
+        ixx="2.70545905130282E-07"
+        ixy="4.03369804356248E-10"
+        ixz="3.98528630246444E-08"
+        iyy="2.61398848427869E-07"
+        iyz="1.28105530251793E-09"
+        izz="1.43212636885902E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.0010899 0.01113 0.1273"
+      rpy="-0.017453 0 0" />
+    <parent
+      link="hand_base_link" />
+    <child
+      link="ring_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.325"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="ring_middle">
+    <inertial>
+      <origin
+        xyz="-0.00220166573650245 0.000343543985173556 0.0115244051126353"
+        rpy="0 0 0" />
+      <mass
+        value="0.00325826270162551" />
+      <inertia
+        ixx="2.8490335431282E-07"
+        ixy="-1.91220861885623E-09"
+        ixz="4.46236286956316E-08"
+        iyy="2.60287161545827E-07"
+        iyz="4.72747837494482E-09"
+        izz="1.3324032112194E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_pip"
+    type="revolute">
+    <origin
+      xyz="-0.0033727 0 0.03351"
+      rpy="0 0 0" />
+    <parent
+      link="ring_proximal" />
+    <child
+      link="ring_middle" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="ring_mcp_pitch"
+      multiplier="1.18"
+      offset="0" />
+  </joint>
+  <link
+    name="ring_distal">
+    <inertial>
+      <origin
+        xyz="0.000205171820409959 5.00624731339938E-05 0.0116640697629539"
+        rpy="0 0 0" />
+      <mass
+        value="0.00386915820986361" />
+      <inertia
+        ixx="2.13094587693163E-07"
+        ixy="-4.43940590912624E-10"
+        ixz="4.32272330130178E-08"
+        iyy="2.07079828868233E-07"
+        iyz="3.00935119539752E-09"
+        izz="1.20296055752743E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_dip"
+    type="revolute">
+    <origin
+      xyz="-0.0050438 0 0.025752"
+      rpy="0 0 0" />
+    <parent
+      link="ring_middle" />
+    <child
+      link="ring_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="ring_mcp_pitch"
+      multiplier="0.7493"
+      offset="0" />
+  </joint>
+  <link
+    name="pinky_proximal">
+    <inertial>
+      <origin
+        xyz="-0.00325189370161746 -5.72983166947649E-05 0.0195197823487483"
+        rpy="0 0 0" />
+      <mass
+        value="0.0030491364649747" />
+      <inertia
+        ixx="2.70544107359494E-07"
+        ixy="4.03294066340961E-10"
+        ixz="3.98526745300938E-08"
+        iyy="2.61397222251281E-07"
+        iyz="1.28156767029427E-09"
+        izz="1.43212528194326E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="0.00091015 0.030436 0.12229"
+      rpy="-0.034907 0 0" />
+    <parent
+      link="hand_base_link" />
+    <child
+      link="pinky_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.325"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="pinky_middle">
+    <inertial>
+      <origin
+        xyz="-0.002201665613911 0.000343544066900431 0.0115244051215708"
+        rpy="0 0 0" />
+      <mass
+        value="0.00325826278499646" />
+      <inertia
+        ixx="2.84903357062453E-07"
+        ixy="-1.91220937408046E-09"
+        ixz="4.46236295954511E-08"
+        iyy="2.60287165262845E-07"
+        iyz="4.72747841623595E-09"
+        izz="1.33240325394021E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_pip"
+    type="revolute">
+    <origin
+      xyz="-0.0033727 0 0.03351"
+      rpy="0 0 0" />
+    <parent
+      link="pinky_proximal" />
+    <child
+      link="pinky_middle" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="pinky_mcp_pitch"
+      multiplier="1.18"
+      offset="0" />
+  </joint>
+  <link
+    name="pinky_distal">
+    <inertial>
+      <origin
+        xyz="0.000205168748081741 5.00603283008771E-05 0.0116640796497016"
+        rpy="0 0 0" />
+      <mass
+        value="0.00386915855597929" />
+      <inertia
+        ixx="2.1309463405403E-07"
+        ixy="-4.43985775170374E-10"
+        ixz="4.32272565907302E-08"
+        iyy="2.07079916973927E-07"
+        iyz="3.00952443609274E-09"
+        izz="1.20295986265221E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_dip"
+    type="revolute">
+    <origin
+      xyz="-0.0050438 0 0.025752"
+      rpy="0 0 0" />
+    <parent
+      link="pinky_middle" />
+    <child
+      link="pinky_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint="pinky_mcp_pitch"
+      multiplier="0.7493"
+      offset="0" />
+  </joint>
+</robot>
