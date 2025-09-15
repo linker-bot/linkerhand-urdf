@@ -98,7 +98,7 @@
       xyz="-1 0 0" />
     <limit
       lower="0"
-      upper="1.1339"
+      upper="1.0467"
       effort="100"
       velocity="1" />
   </joint>
@@ -156,7 +156,7 @@
       xyz="0 0 1" />
     <limit
       lower="0"
-      upper="1.9189"
+      upper="1.2037"
       effort="100"
       velocity="1" />
   </joint>
@@ -214,7 +214,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.5146"
+      upper="0.4867"
       effort="100"
       velocity="1" />
   </joint>
@@ -272,12 +272,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.7152"
+      upper="0.6699"
       effort="100"
       velocity="1" />
     <mimic
       joint="thumb_cmc_pitch"
-      multiplier="1.3898"
+      multiplier="1.38"
       offset="0" />
   </joint>
   <link
@@ -334,12 +334,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.7763"
+      upper="0.6611"
       effort="100"
       velocity="1" />
     <mimic
       joint="thumb_cmc_pitch"
-      multiplier="1.5085"
+      multiplier="1.36"
       offset="0" />
   </joint>
   <link
@@ -396,7 +396,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.3607"
+      upper="1.3275"
       effort="100"
       velocity="1" />
   </joint>
@@ -454,12 +454,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.8317"
+      upper="1.7915"
       effort="100"
       velocity="1" />
     <mimic
       joint="index_mcp_pitch"
-      multiplier="1.3462"
+      multiplier="1.35"
       offset="0" />
   </joint>
   <link
@@ -516,12 +516,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.628"
+      upper="0.6053"
       effort="100"
       velocity="1" />
     <mimic
       joint="index_mcp_pitch"
-      multiplier="0.4615"
+      multiplier="0.46"
       offset="0" />
   </joint>
   <link
@@ -578,7 +578,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.3607"
+      upper="1.3275"
       effort="100"
       velocity="1" />
   </joint>
@@ -636,12 +636,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.8317"
+      upper="1.7915"
       effort="100"
       velocity="1" />
     <mimic
       joint="middle_mcp_pitch"
-      multiplier="1.3462"
+      multiplier="1.35"
       offset="0" />
   </joint>
   <link
@@ -698,12 +698,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.628"
+      upper="0.6053"
       effort="100"
       velocity="1" />
     <mimic
       joint="middle_mcp_pitch"
-      multiplier="0.4615"
+      multiplier="0.46"
       offset="0" />
   </joint>
   <link
@@ -760,7 +760,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.3607"
+      upper="1.3275"
       effort="100"
       velocity="1" />
   </joint>
@@ -818,12 +818,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.8317"
+      upper="1.7915"
       effort="100"
       velocity="1" />
     <mimic
       joint="ring_mcp_pitch"
-      multiplier="1.3462"
+      multiplier="1.35"
       offset="0" />
   </joint>
   <link
@@ -880,12 +880,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.628"
+      upper="0.6053"
       effort="100"
       velocity="1" />
     <mimic
       joint="ring_mcp_pitch"
-      multiplier="0.4615"
+      multiplier="0.46"
       offset="0" />
   </joint>
   <link
@@ -942,7 +942,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.3607"
+      upper="1.3275"
       effort="100"
       velocity="1" />
   </joint>
@@ -1000,12 +1000,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.8317"
+      upper="1.7915"
       effort="100"
       velocity="1" />
     <mimic
       joint="pinky_mcp_pitch"
-      multiplier="1.3462"
+      multiplier="1.35"
       offset="0" />
   </joint>
   <link
@@ -1062,12 +1062,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.628"
+      upper="0.6053"
       effort="100"
       velocity="1" />
     <mimic
       joint="pinky_mcp_pitch"
-      multiplier="0.4615"
+      multiplier="0.46"
       offset="0" />
   </joint>
 </robot>
