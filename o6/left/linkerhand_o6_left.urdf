@@ -98,7 +98,7 @@
       xyz="0 0 1" />
     <limit
       lower="0"
-      upper="1.36"
+      upper="1.54"
       effort="100"
       velocity="1" />
   </joint>
@@ -156,7 +156,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="0.58"
+      upper="0.52"
       effort="100"
       velocity="1" />
   </joint>
@@ -214,12 +214,12 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.08"
+      upper="0.96"
       effort="100"
       velocity="1" />
     <mimic
       joint="thumb_cmc_pitch"
-      multiplier="1.86"
+      multiplier="1.83"
       offset="0" />
   </joint>
   <link
@@ -276,7 +276,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.60"
+      upper="1.57"
       effort="100"
       velocity="1" />
   </joint>
@@ -334,7 +334,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.43"
+      upper="1.4"
       effort="100"
       velocity="1" />
     <mimic
@@ -396,7 +396,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.60"
+      upper="1.57"
       effort="100"
       velocity="1" />
   </joint>
@@ -454,7 +454,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.43"
+      upper="1.4"
       effort="100"
       velocity="1" />
     <mimic
@@ -516,7 +516,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.60"
+      upper="1.57"
       effort="100"
       velocity="1" />
   </joint>
@@ -574,7 +574,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.43"
+      upper="1.4"
       effort="100"
       velocity="1" />
     <mimic
@@ -636,7 +636,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.60"
+      upper="1.57"
       effort="100"
       velocity="1" />
     
@@ -695,7 +695,7 @@
       xyz="0 1 0" />
     <limit
       lower="0"
-      upper="1.43"
+      upper="1.4"
       effort="100"
       velocity="1" />
     <mimic
