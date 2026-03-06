@@ -4,6 +4,13 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="linker_o6_right_v1.0_urdf">
+  <material name="silver">
+    <color rgba="0.5 0.5 0.52 1.0"/>
+  </material>
+  
+  <material name="BlackAccent">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
   <link
     name="hand_base_link">
     <inertial>
@@ -28,11 +35,7 @@
         <mesh
           filename="meshes/hand_base_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.6 0 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -68,11 +71,7 @@
         <mesh
           filename="meshes/thumb_metacarpals_base2.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.164705882352941 0.282352941176471 0.443137254901961 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -126,11 +125,7 @@
         <mesh
           filename="meshes/thumb_metacarpals.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.6 0 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -184,11 +179,7 @@
         <mesh
           filename="meshes/thumb_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.792156862745098 0.792156862745098 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -246,11 +237,7 @@
         <mesh
           filename="meshes/index_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.980392156862745 0.780392156862745 0.627450980392157 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -304,11 +291,7 @@
         <mesh
           filename="meshes/index_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.164705882352941 0.282352941176471 0.443137254901961 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -366,11 +349,7 @@
         <mesh
           filename="meshes/middle_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.164705882352941 0.282352941176471 0.443137254901961 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -424,11 +403,7 @@
         <mesh
           filename="meshes/middle_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.164705882352941 0.282352941176471 0.443137254901961 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -486,11 +461,7 @@
         <mesh
           filename="meshes/ring_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.980392156862745 0.780392156862745 0.627450980392157 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -544,11 +515,7 @@
         <mesh
           filename="meshes/ring_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.164705882352941 0.282352941176471 0.443137254901961 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -606,11 +573,7 @@
         <mesh
           filename="meshes/pinky_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.980392156862745 0.780392156862745 0.627450980392157 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -664,11 +627,7 @@
         <mesh
           filename="meshes/pinky_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.164705882352941 0.282352941176471 0.443137254901961 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
