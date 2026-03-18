@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
-     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="linkerhand_L6V3.1_left_1.9">
+  name="linkerhand_L6V3.1_left_2.1">
   <!-- 手掌基座，作为整只手的根链接 -->
   <link
-    name="hand_base_link">
+    name="lh_hand_base_link">
     <inertial>
       <origin
         xyz="0.00199 -0.00091 0.058381"
@@ -47,7 +44,7 @@
   </link>
 
   <link
-    name="thumb_metacarpals_base1">
+    name="lh_thumb_metacarpals_base1">
     <inertial>
       <origin
         xyz="0.0018663 -0.0066406 0.001533"
@@ -87,15 +84,15 @@
     </collision>
   </link>
   <joint
-    name="thumb_cmc_roll"
+    name="lh_thumb_cmc_roll"
     type="revolute">
     <origin
       xyz="0.0078133 -0.029898 0.026692"
       rpy="-0.034907 0 0" />
     <parent
-      link="hand_base_link" />
+      link="lh_hand_base_link" />
     <child
-      link="thumb_metacarpals_base1" />
+      link="lh_thumb_metacarpals_base1" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -106,7 +103,7 @@
     <dynamics damping="1.4e-05" friction="0.008"/>
   </joint>
   <link
-    name="thumb_metacarpals">
+    name="lh_thumb_metacarpals">
     <inertial>
       <origin
         xyz="0.00769270907060086 0.0859662184722988 0.0235283086675235"
@@ -146,15 +143,15 @@
     </collision>
   </link>
   <joint
-    name="thumb_cmc_pitch"
+    name="lh_thumb_cmc_pitch"
     type="revolute">
     <origin
       xyz="0.0057298 -0.01332 0.0027456"
       rpy="1.1083 0 0.40143" />
     <parent
-      link="thumb_metacarpals_base1" />
+      link="lh_thumb_metacarpals_base1" />
     <child
-      link="thumb_metacarpals" />
+      link="lh_thumb_metacarpals" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -165,7 +162,7 @@
     <dynamics damping="1.4e-05" friction="0.008"/>
   </joint>
   <link
-    name="thumb_distal">
+    name="lh_thumb_distal">
     <inertial>
       <origin
         xyz="0.00769270907081708 0.0798662184721594 -0.0591716913325555"
@@ -205,15 +202,15 @@
     </collision>
   </link>
   <joint
-    name="thumb_dip"
+    name="lh_thumb_dip"
     type="revolute">
     <origin
       xyz="0 0.0061 0.0827"
       rpy="0 0 0" />
     <parent
-      link="thumb_metacarpals" />
+      link="lh_thumb_metacarpals" />
     <child
-      link="thumb_distal" />
+      link="lh_thumb_distal" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -222,12 +219,12 @@
       effort="0"
       velocity="1.7" />
     <mimic
-      joint="thumb_cmc_pitch"
+      joint="lh_thumb_cmc_pitch"
       multiplier="1.226495"
       offset="0" />
   </joint>
   <link
-    name="index_proximal">
+    name="lh_index_proximal">
     <inertial>
       <origin
         xyz="0.001776 -0.00011 0.012556"
@@ -267,15 +264,15 @@
     </collision>
   </link>
   <joint
-    name="index_mcp_pitch"
+    name="lh_index_mcp_pitch"
     type="revolute">
     <origin
       xyz="-0.00066821 -0.028967 0.11722"
       rpy="0 0 0" />
     <parent
-      link="hand_base_link" />
+      link="lh_hand_base_link" />
     <child
-      link="index_proximal" />
+      link="lh_index_proximal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -286,7 +283,7 @@
     <dynamics damping="1.4e-05" friction="0.008"/>
   </joint>
   <link
-    name="index_distal">
+    name="lh_index_distal">
     <inertial>
       <origin
         xyz="0.0134 0.002262 0.016992"
@@ -326,15 +323,15 @@
     </collision>
   </link>
   <joint
-    name="index_dip"
+    name="lh_index_dip"
     type="revolute">
     <origin
       xyz="0.001001 -0.000537 0.028003"
       rpy="0 0 0" />
     <parent
-      link="index_proximal" />
+      link="lh_index_proximal" />
     <child
-      link="index_distal" />
+      link="lh_index_distal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -343,12 +340,12 @@
       effort="0"
       velocity="3.1" />
     <mimic
-      joint="index_mcp_pitch"
+      joint="lh_index_mcp_pitch"
       multiplier="1.125676"
       offset="0" />
   </joint>
   <link
-    name="middle_proximal">
+    name="lh_middle_proximal">
     <inertial>
       <origin
         xyz="0.001776 -0.00011 0.012556"
@@ -388,15 +385,15 @@
     </collision>
   </link>
   <joint
-    name="middle_mcp_pitch"
+    name="lh_middle_mcp_pitch"
     type="revolute">
     <origin
       xyz="-0.00066821 -0.0089013 0.12322"
       rpy="0 0 0" />
     <parent
-      link="hand_base_link" />
+      link="lh_hand_base_link" />
     <child
-      link="middle_proximal" />
+      link="lh_middle_proximal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -407,7 +404,7 @@
     <dynamics damping="1.4e-05" friction="0.008"/>
   </joint>
   <link
-    name="middle_distal">
+    name="lh_middle_distal">
     <inertial>
       <origin
         xyz="0.0134 0.002262 0.016992"
@@ -447,15 +444,15 @@
     </collision>
   </link>
   <joint
-    name="middle_dip"
+    name="lh_middle_dip"
     type="revolute">
     <origin
       xyz="0.000994 0.000058 0.028008"
       rpy="0 0 0" />
     <parent
-      link="middle_proximal" />
+      link="lh_middle_proximal" />
     <child
-      link="middle_distal" />
+      link="lh_middle_distal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -464,12 +461,12 @@
       effort="0"
       velocity="3.1" />
     <mimic
-      joint="middle_mcp_pitch"
+      joint="lh_middle_mcp_pitch"
       multiplier="1.125676"
       offset="0" />
   </joint>
   <link
-    name="ring_proximal">
+    name="lh_ring_proximal">
     <inertial>
       <origin
         xyz="0.001776 -0.00011 0.012556"
@@ -509,15 +506,15 @@
     </collision>
   </link>
   <joint
-    name="ring_mcp_pitch"
+    name="lh_ring_mcp_pitch"
     type="revolute">
     <origin
       xyz="-0.00067368 0.010717 0.11822"
       rpy="0 0 0" />
     <parent
-      link="hand_base_link" />
+      link="lh_hand_base_link" />
     <child
-      link="ring_proximal" />
+      link="lh_ring_proximal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -528,7 +525,7 @@
     <dynamics damping="1.4e-05" friction="0.008"/>
   </joint>
   <link
-    name="ring_distal">
+    name="lh_ring_distal">
     <inertial>
       <origin
         xyz="0.0134 0.002262 0.016992"
@@ -568,15 +565,15 @@
     </collision>
   </link>
   <joint
-    name="ring_dip"
+    name="lh_ring_dip"
     type="revolute">
     <origin
       xyz="0.000979 0.001534 0.027967"
       rpy="0 0 0" />
     <parent
-      link="ring_proximal" />
+      link="lh_ring_proximal" />
     <child
-      link="ring_distal" />
+      link="lh_ring_distal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -585,12 +582,12 @@
       effort="0"
       velocity="3.1" />
     <mimic
-      joint="ring_mcp_pitch"
+      joint="lh_ring_mcp_pitch"
       multiplier="1.125676"
       offset="0" />
   </joint>
   <link
-    name="pinky_proximal">
+    name="lh_pinky_proximal">
     <inertial>
       <origin
         xyz="0.001776 -0.00011 0.012556"
@@ -630,15 +627,15 @@
     </collision>
   </link>
   <joint
-    name="pinky_mcp_pitch"
+    name="lh_pinky_mcp_pitch"
     type="revolute">
     <origin
       xyz="-0.00067852 0.029814 0.11424"
       rpy="0 0 0" />
     <parent
-      link="hand_base_link" />
+      link="lh_hand_base_link" />
     <child
-      link="pinky_proximal" />
+      link="lh_pinky_proximal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -649,7 +646,7 @@
     <dynamics damping="1.4e-05" friction="0.008"/>
   </joint>
   <link
-    name="pinky_distal">
+    name="lh_pinky_distal">
     <inertial>
       <origin
         xyz="0.0134 0.002262 0.016992"
@@ -689,15 +686,15 @@
     </collision>
   </link>
   <joint
-    name="pinky_dip"
+    name="lh_pinky_dip"
     type="revolute">
     <origin
       xyz="0.000979 0.001534 0.027967"
       rpy="0 0 0" />
     <parent
-      link="pinky_proximal" />
+      link="lh_pinky_proximal" />
     <child
-      link="pinky_distal" />
+      link="lh_pinky_distal" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -706,13 +703,13 @@
       effort="0"
       velocity="3.1" />
     <mimic
-      joint="pinky_mcp_pitch"
+      joint="lh_pinky_mcp_pitch"
       multiplier="1.125676"
       offset="0" />
   </joint>
   <transmission name="trans_thumb_cmc_roll">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="thumb_cmc_roll">
+    <joint name="lh_thumb_cmc_roll">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_thumb_cmc_roll">
@@ -722,7 +719,7 @@
   </transmission>
   <transmission name="trans_index_mcp_pitch">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="index_mcp_pitch">
+    <joint name="lh_index_mcp_pitch">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_index_mcp_pitch">
@@ -732,7 +729,7 @@
   </transmission>
   <transmission name="trans_middle_mcp_pitch">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="middle_mcp_pitch">
+    <joint name="lh_middle_mcp_pitch">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_middle_mcp_pitch">
@@ -742,7 +739,7 @@
   </transmission>
   <transmission name="trans_ring_mcp_pitch">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="ring_mcp_pitch">
+    <joint name="lh_ring_mcp_pitch">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_ring_mcp_pitch">
@@ -752,7 +749,7 @@
   </transmission>
   <transmission name="trans_pinky_mcp_pitch">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="pinky_mcp_pitch">
+    <joint name="lh_pinky_mcp_pitch">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_pinky_mcp_pitch">
@@ -762,7 +759,7 @@
   </transmission>
   <transmission name="trans_thumb_cmc_pitch">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="thumb_cmc_pitch">
+    <joint name="lh_thumb_cmc_pitch">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_thumb_cmc_pitch">
@@ -779,12 +776,12 @@
       <!-- 四指DIP关节的mimic约束 - 统一使用1.125676 -->
       <!-- polycoef格式: c0 c1 c2 c3 c4 c5，关系: q1 = c0 + c1*q2 + c2*q2^2 + ... -->
       <!-- 对于 mimic: q_dip = 0 + 1.125676*q_mcp + 0*q_mcp^2 + ... -->
-      <joint name="couple_index" joint1="index_dip" joint2="index_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
-      <joint name="couple_middle" joint1="middle_dip" joint2="middle_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
-      <joint name="couple_ring" joint1="ring_dip" joint2="ring_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
-      <joint name="couple_pinky" joint1="pinky_dip" joint2="pinky_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_index" joint1="lh_index_dip" joint2="lh_index_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_middle" joint1="lh_middle_dip" joint2="lh_middle_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_ring" joint1="lh_ring_dip" joint2="lh_ring_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_pinky" joint1="lh_pinky_dip" joint2="lh_pinky_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
       <!-- 大拇指DIP关节的mimic约束 - 使用1.226495 -->
-      <joint name="couple_thumb" joint1="thumb_dip" joint2="thumb_cmc_pitch" polycoef="0 1.226495 0 0 0 0"/>
+      <joint name="lh_couple_thumb" joint1="lh_thumb_dip" joint2="lh_thumb_cmc_pitch" polycoef="0 1.226495 0 0 0 0"/>
     </equality>
   </mujoco>
   <gazebo reference="hand_base_link">
