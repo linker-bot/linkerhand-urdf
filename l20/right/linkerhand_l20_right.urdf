@@ -4,6 +4,13 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="linker_l20_right_v9.0_urdf">
+  <material name="silver">
+    <color rgba="0.5 0.5 0.52 1.0"/>
+  </material>
+
+  <material name="BlackAccent">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
   <link
     name="base_link">
     <inertial>
@@ -28,11 +35,7 @@
         <mesh
           filename="meshes/base_link.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -68,11 +71,7 @@
         <mesh
           filename="meshes/pinky_metacarpals.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -126,11 +125,7 @@
         <mesh
           filename="meshes/pinky_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -184,11 +179,7 @@
         <mesh
           filename="meshes/pinky_middle.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -242,11 +233,7 @@
         <mesh
           filename="meshes/pinky_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -304,11 +291,7 @@
         <mesh
           filename="meshes/ring_metacarpals.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -362,11 +345,7 @@
         <mesh
           filename="meshes/ring_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -420,11 +399,7 @@
         <mesh
           filename="meshes/ring_middle.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -478,11 +453,7 @@
         <mesh
           filename="meshes/ring_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -540,11 +511,7 @@
         <mesh
           filename="meshes/middle_metacarpals.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -598,11 +565,7 @@
         <mesh
           filename="meshes/middle_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -656,11 +619,7 @@
         <mesh
           filename="meshes/middle_middle.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -714,11 +673,7 @@
         <mesh
           filename="meshes/middle_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -776,11 +731,7 @@
         <mesh
           filename="meshes/index_metacarpals.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -834,11 +785,7 @@
         <mesh
           filename="meshes/index_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.807843137254902 0.843137254901961 0.905882352941176 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -892,11 +839,7 @@
         <mesh
           filename="meshes/index_middle.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -950,11 +893,7 @@
         <mesh
           filename="meshes/index_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -1012,11 +951,7 @@
         <mesh
           filename="meshes/thumb_metacarpals_base1.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -1070,11 +1005,7 @@
         <mesh
           filename="meshes/thumb_metacarpals_base2.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="BlackAccent"/>
     </visual>
     <collision>
       <origin
@@ -1128,11 +1059,7 @@
         <mesh
           filename="meshes/thumb_metacarpals.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -1186,11 +1113,7 @@
         <mesh
           filename="meshes/thumb_proximal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
@@ -1244,11 +1167,7 @@
         <mesh
           filename="meshes/thumb_distal.STL" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.823529411764706 0.823529411764706 1 1" />
-      </material>
+      <material name="silver"/>
     </visual>
     <collision>
       <origin
