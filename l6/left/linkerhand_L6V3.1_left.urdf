@@ -100,7 +100,7 @@
       upper="1.256637"
       effort="0.588"
       velocity="5.95" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.02" friction="0.05416667"/>
   </joint>
   <link
     name="lh_thumb_metacarpals">
@@ -159,7 +159,7 @@
       upper="0.837758"
       effort="1.008"
       velocity="3.47" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.02" friction="0.0375"/>
   </joint>
   <link
     name="lh_thumb_distal">
@@ -280,7 +280,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.04"/>
   </joint>
   <link
     name="lh_index_distal">
@@ -326,7 +326,7 @@
     name="lh_index_dip"
     type="revolute">
     <origin
-      xyz="0.001001 -0.000537 0.028003"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_index_proximal" />
@@ -401,7 +401,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.02708333"/>
   </joint>
   <link
     name="lh_middle_distal">
@@ -447,7 +447,7 @@
     name="lh_middle_dip"
     type="revolute">
     <origin
-      xyz="0.000994 0.000058 0.028008"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_middle_proximal" />
@@ -522,7 +522,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.02291667"/>
   </joint>
   <link
     name="lh_ring_distal">
@@ -568,7 +568,7 @@
     name="lh_ring_dip"
     type="revolute">
     <origin
-      xyz="0.000979 0.001534 0.027967"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_ring_proximal" />
@@ -643,7 +643,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.01"/>
   </joint>
   <link
     name="lh_pinky_distal">
@@ -689,7 +689,7 @@
     name="lh_pinky_dip"
     type="revolute">
     <origin
-      xyz="0.000979 0.001534 0.027967"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_pinky_proximal" />
