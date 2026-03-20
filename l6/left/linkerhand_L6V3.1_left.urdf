@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot
-  name="linkerhand_L6V3.1_left_2.1">
+  name="linkerhand_L6V3.1_left_2.2">
   <!-- 手掌基座，作为整只手的根链接 -->
   <link
     name="lh_hand_base_link">
@@ -784,32 +784,32 @@
       <joint name="lh_couple_thumb" joint1="lh_thumb_dip" joint2="lh_thumb_cmc_pitch" polycoef="0 1.226495 0 0 0 0"/>
     </equality>
   </mujoco>
-  <gazebo reference="hand_base_link">
+  <gazebo reference="lh_hand_base_link">
     <mu1>1.5</mu1>
     <mu2>1.5</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="thumb_distal">
+  <gazebo reference="lh_thumb_distal">
     <mu1>1.5</mu1>
     <mu2>1.5</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="index_distal">
+  <gazebo reference="lh_index_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="middle_distal">
+  <gazebo reference="lh_middle_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="ring_distal">
+  <gazebo reference="lh_ring_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="pinky_distal">
+  <gazebo reference="lh_pinky_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
