@@ -42,7 +42,6 @@
       </geometry>
     </collision>
   </link>
-
   <link
     name="lh_thumb_metacarpals_base1">
     <inertial>
@@ -201,6 +200,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_thumb_tip" />
+  <joint
+    name="lh_thumb_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0 0.0035 0.026"
+      rpy="0 0 1.5708" />
+    <parent
+      link="lh_thumb_distal" />
+    <child
+      link="lh_thumb_tip" />
+  </joint>
   <joint
     name="lh_thumb_dip"
     type="revolute">
@@ -322,6 +334,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_index_tip" />
+  <joint
+    name="lh_index_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_index_distal" />
+    <child
+      link="lh_index_tip" />
+  </joint>
   <joint
     name="lh_index_dip"
     type="revolute">
@@ -443,6 +468,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_middle_tip" />
+  <joint
+    name="lh_middle_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_middle_distal" />
+    <child
+      link="lh_middle_tip" />
+  </joint>
   <joint
     name="lh_middle_dip"
     type="revolute">
@@ -564,6 +602,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_ring_tip" />
+  <joint
+    name="lh_ring_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_ring_distal" />
+    <child
+      link="lh_ring_tip" />
+  </joint>
   <joint
     name="lh_ring_dip"
     type="revolute">
@@ -685,6 +736,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_pinky_tip" />
+  <joint
+    name="lh_pinky_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_pinky_distal" />
+    <child
+      link="lh_pinky_tip" />
+  </joint>
   <joint
     name="lh_pinky_dip"
     type="revolute">

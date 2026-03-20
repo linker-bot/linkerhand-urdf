@@ -200,6 +200,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="rh_thumb_tip" />
+  <joint
+    name="rh_thumb_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0 -0.0035 0.026"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="rh_thumb_distal" />
+    <child
+      link="rh_thumb_tip" />
+  </joint>
   <joint
     name="rh_thumb_dip"
     type="revolute">
@@ -322,6 +335,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="rh_index_tip" />
+  <joint
+    name="rh_index_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="rh_index_distal" />
+    <child
+      link="rh_index_tip" />
+  </joint>
   <joint
     name="rh_index_dip"
     type="revolute">
@@ -443,6 +469,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="rh_middle_tip" />
+  <joint
+    name="rh_middle_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="rh_middle_distal" />
+    <child
+      link="rh_middle_tip" />
+  </joint>
   <joint
     name="rh_middle_dip"
     type="revolute">
@@ -564,6 +603,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="rh_ring_tip" />
+  <joint
+    name="rh_ring_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="rh_ring_distal" />
+    <child
+      link="rh_ring_tip" />
+  </joint>
   <joint
     name="rh_ring_dip"
     type="revolute">
@@ -685,6 +737,19 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="rh_pinky_tip" />
+  <joint
+    name="rh_pinky_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="rh_pinky_distal" />
+    <child
+      link="rh_pinky_tip" />
+  </joint>
   <joint
     name="rh_pinky_dip"
     type="revolute">
