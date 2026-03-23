@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot
-  name="linkerhand_L6V3.1_left_2.1">
+  name="linkerhand_L6V3.1_left_2.2">
   <!-- 手掌基座，作为整只手的根链接 -->
   <link
     name="lh_hand_base_link">
@@ -42,7 +42,6 @@
       </geometry>
     </collision>
   </link>
-
   <link
     name="lh_thumb_metacarpals_base1">
     <inertial>
@@ -100,7 +99,7 @@
       upper="1.256637"
       effort="0.588"
       velocity="5.95" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.02" friction="0.05416667"/>
   </joint>
   <link
     name="lh_thumb_metacarpals">
@@ -159,7 +158,7 @@
       upper="0.837758"
       effort="1.008"
       velocity="3.47" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.02" friction="0.0375"/>
   </joint>
   <link
     name="lh_thumb_distal">
@@ -201,6 +200,34 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_thumb_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_thumb_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0 0.0035 0.026"
+      rpy="0 0 1.5708" />
+    <parent
+      link="lh_thumb_distal" />
+    <child
+      link="lh_thumb_tip" />
+  </joint>
   <joint
     name="lh_thumb_dip"
     type="revolute">
@@ -280,7 +307,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.04"/>
   </joint>
   <link
     name="lh_index_distal">
@@ -322,11 +349,39 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_index_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_index_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_index_distal" />
+    <child
+      link="lh_index_tip" />
+  </joint>
   <joint
     name="lh_index_dip"
     type="revolute">
     <origin
-      xyz="0.001001 -0.000537 0.028003"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_index_proximal" />
@@ -401,7 +456,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.02708333"/>
   </joint>
   <link
     name="lh_middle_distal">
@@ -443,11 +498,39 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_middle_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_middle_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_middle_distal" />
+    <child
+      link="lh_middle_tip" />
+  </joint>
   <joint
     name="lh_middle_dip"
     type="revolute">
     <origin
-      xyz="0.000994 0.000058 0.028008"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_middle_proximal" />
@@ -522,7 +605,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.02291667"/>
   </joint>
   <link
     name="lh_ring_distal">
@@ -564,11 +647,39 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_ring_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_ring_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_ring_distal" />
+    <child
+      link="lh_ring_tip" />
+  </joint>
   <joint
     name="lh_ring_dip"
     type="revolute">
     <origin
-      xyz="0.000979 0.001534 0.027967"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_ring_proximal" />
@@ -643,7 +754,7 @@
       upper="1.134464"
       effort="0.574"
       velocity="6.10" />
-    <dynamics damping="1.4e-05" friction="0.008"/>
+    <dynamics damping="0.01" friction="0.01"/>
   </joint>
   <link
     name="lh_pinky_distal">
@@ -685,11 +796,39 @@
       </geometry>
     </collision>
   </link>
+  <link
+    name="lh_pinky_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_pinky_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_pinky_distal" />
+    <child
+      link="lh_pinky_tip" />
+  </joint>
   <joint
     name="lh_pinky_dip"
     type="revolute">
     <origin
-      xyz="0.000979 0.001534 0.027967"
+      xyz="0.00093749 0 0.028002"
       rpy="0 0 0" />
     <parent
       link="lh_pinky_proximal" />
@@ -784,32 +923,32 @@
       <joint name="lh_couple_thumb" joint1="lh_thumb_dip" joint2="lh_thumb_cmc_pitch" polycoef="0 1.226495 0 0 0 0"/>
     </equality>
   </mujoco>
-  <gazebo reference="hand_base_link">
+  <gazebo reference="lh_hand_base_link">
     <mu1>1.5</mu1>
     <mu2>1.5</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="thumb_distal">
+  <gazebo reference="lh_thumb_distal">
     <mu1>1.5</mu1>
     <mu2>1.5</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="index_distal">
+  <gazebo reference="lh_index_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="middle_distal">
+  <gazebo reference="lh_middle_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="ring_distal">
+  <gazebo reference="lh_ring_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="pinky_distal">
+  <gazebo reference="lh_pinky_distal">
     <mu1>1.1</mu1>
     <mu2>1.1</mu2>
     <selfCollide>true</selfCollide>
