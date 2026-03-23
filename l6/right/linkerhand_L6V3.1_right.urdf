@@ -201,7 +201,22 @@
     </collision>
   </link>
   <link
-    name="rh_thumb_tip" />
+    name="rh_thumb_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
   <joint
     name="rh_thumb_tip_fixed"
     type="fixed">
@@ -336,7 +351,22 @@
     </collision>
   </link>
   <link
-    name="rh_index_tip" />
+    name="rh_index_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
   <joint
     name="rh_index_tip_fixed"
     type="fixed">
@@ -470,7 +500,22 @@
     </collision>
   </link>
   <link
-    name="rh_middle_tip" />
+    name="rh_middle_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
   <joint
     name="rh_middle_tip_fixed"
     type="fixed">
@@ -604,7 +649,22 @@
     </collision>
   </link>
   <link
-    name="rh_ring_tip" />
+    name="rh_ring_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
   <joint
     name="rh_ring_tip_fixed"
     type="fixed">
@@ -738,7 +798,22 @@
     </collision>
   </link>
   <link
-    name="rh_pinky_tip" />
+    name="rh_pinky_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
   <joint
     name="rh_pinky_tip_fixed"
     type="fixed">
