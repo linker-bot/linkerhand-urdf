@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="linkerhand_l6v3.1_left">
+  <!-- 手掌基座，作为整只手的根链接 -->
+  <link
+    name="lh_hand_base_link">
+    <inertial>
+      <origin
+        xyz="0.00199 -0.00091 0.058381"
+        rpy="0 0 0" />
+      <mass
+        value="0.4185" />
+      <inertia
+        ixx="0.0004998"
+        ixy="0.000012853"
+        ixz="-0.000008317"
+        iyy="0.0003567"
+        iyz="0.000010354"
+        izz="0.0002301" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/hand_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/hand_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh_thumb_metacarpals_base1">
+    <inertial>
+      <origin
+        xyz="0.0018663 -0.0066406 0.001533"
+        rpy="0 0 0" />
+      <mass
+        value="0.01" />
+      <inertia
+        ixx="3.3724E-07"
+        ixy="1.11E-07"
+        ixz="-3.6039E-08"
+        iyy="2.9457E-07"
+        iyz="5.7181E-08"
+        izz="4.903E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals_base1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals_base1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_thumb_cmc_roll"
+    type="revolute">
+    <origin
+      xyz="0.0078133 -0.029898 0.026692"
+      rpy="-0.034907 0 0" />
+    <parent
+      link="lh_hand_base_link" />
+    <child
+      link="lh_thumb_metacarpals_base1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.087266"
+      upper="1.256637"
+      effort="0.588"
+      velocity="5.95" />
+    <dynamics damping="0.02" friction="0.05416667"/>
+  </joint>
+  <link
+    name="lh_thumb_metacarpals">
+    <inertial>
+      <origin
+        xyz="0.00769270907060086 0.0859662184722988 0.0235283086675235"
+        rpy="0 0 0" />
+      <mass
+        value="0.065" />
+      <inertia
+        ixx="8.407E-06"
+        ixy="-1.1338E-09"
+        ixz="1.1136E-08"
+        iyy="8.3899E-06"
+        iyz="3.1171E-07"
+        izz="2.0091E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_metacarpals.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_thumb_cmc_pitch"
+    type="revolute">
+    <origin
+      xyz="0.0057298 -0.01332 0.0027456"
+      rpy="1.1083 0 0.40143" />
+    <parent
+      link="lh_thumb_metacarpals_base1" />
+    <child
+      link="lh_thumb_metacarpals" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.837758"
+      effort="1.008"
+      velocity="3.47" />
+    <dynamics damping="0.02" friction="0.0375"/>
+  </joint>
+  <link
+    name="lh_thumb_distal">
+    <inertial>
+      <origin
+        xyz="0.00769270907081708 0.0798662184721594 -0.0591716913325555"
+        rpy="0 0 0" />
+      <mass
+        value="0.018" />
+      <inertia
+        ixx="1.5546E-06"
+        ixy="2.4423E-09"
+        ixz="2.8147E-09"
+        iyy="1.7108E-06"
+        iyz="-7.2756E-08"
+        izz="9.1709E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/thumb_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh_thumb_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_thumb_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0 0.0035 0.026"
+      rpy="0 0 1.5708" />
+    <parent
+      link="lh_thumb_distal" />
+    <child
+      link="lh_thumb_tip" />
+  </joint>
+  <joint
+    name="lh_thumb_dip"
+    type="revolute">
+    <origin
+      xyz="0 0.0061 0.0827"
+      rpy="0 0 0" />
+    <parent
+      link="lh_thumb_metacarpals" />
+    <child
+      link="lh_thumb_distal" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.963287"
+      effort="0"
+      velocity="1.7" />
+    <mimic
+      joint="lh_thumb_cmc_pitch"
+      multiplier="1.226495"
+      offset="0" />
+  </joint>
+  <link
+    name="lh_index_proximal">
+    <inertial>
+      <origin
+        xyz="0.001776 -0.00011 0.012556"
+        rpy="0 0 0" />
+      <mass
+        value="0.008553" />
+      <inertia
+        ixx="0.000000797543"
+        ixy="-0.000000001275"
+        ixz="0.000000138601"
+        iyy="0.000000800499"
+        iyz="0.000000000939"
+        izz="0.000000357001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_index_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.00066821 -0.028967 0.11722"
+      rpy="0 0 0" />
+    <parent
+      link="lh_hand_base_link" />
+    <child
+      link="lh_index_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.134464"
+      effort="0.574"
+      velocity="6.10" />
+    <dynamics damping="0.01" friction="0.04"/>
+  </joint>
+  <link
+    name="lh_index_distal">
+    <inertial>
+      <origin
+        xyz="0.0134 0.002262 0.016992"
+        rpy="0 0 0" />
+      <mass
+        value="0.018408" />
+      <inertia
+        ixx="0.000002488712"
+        ixy="0.000000008249"
+        ixz="-0.000001523059"
+        iyy="0.000003723754"
+        iyz="0.000000014019"
+        izz="0.000001813582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/index_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh_index_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_index_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_index_distal" />
+    <child
+      link="lh_index_tip" />
+  </joint>
+  <joint
+    name="lh_index_dip"
+    type="revolute">
+    <origin
+      xyz="0.00093749 0 0.028002"
+      rpy="0 0 0" />
+    <parent
+      link="lh_index_proximal" />
+    <child
+      link="lh_index_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.277039"
+      effort="0"
+      velocity="3.1" />
+    <mimic
+      joint="lh_index_mcp_pitch"
+      multiplier="1.125676"
+      offset="0" />
+  </joint>
+  <link
+    name="lh_middle_proximal">
+    <inertial>
+      <origin
+        xyz="0.001776 -0.00011 0.012556"
+        rpy="0 0 0" />
+      <mass
+        value="0.008553" />
+      <inertia
+        ixx="0.000000797543"
+        ixy="-0.000000001275"
+        ixz="0.000000138601"
+        iyy="0.000000800499"
+        iyz="0.000000000939"
+        izz="0.000000357001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_middle_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.00066821 -0.0089013 0.12322"
+      rpy="0 0 0" />
+    <parent
+      link="lh_hand_base_link" />
+    <child
+      link="lh_middle_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.134464"
+      effort="0.574"
+      velocity="6.10" />
+    <dynamics damping="0.01" friction="0.02708333"/>
+  </joint>
+  <link
+    name="lh_middle_distal">
+    <inertial>
+      <origin
+        xyz="0.0134 0.002262 0.016992"
+        rpy="0 0 0" />
+      <mass
+        value="0.018408" />
+      <inertia
+        ixx="0.000002488712"
+        ixy="0.000000008249"
+        ixz="-0.000001523059"
+        iyy="0.000003723754"
+        iyz="0.000000014019"
+        izz="0.000001813582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/middle_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh_middle_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_middle_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_middle_distal" />
+    <child
+      link="lh_middle_tip" />
+  </joint>
+  <joint
+    name="lh_middle_dip"
+    type="revolute">
+    <origin
+      xyz="0.00093749 0 0.028002"
+      rpy="0 0 0" />
+    <parent
+      link="lh_middle_proximal" />
+    <child
+      link="lh_middle_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.277039"
+      effort="0"
+      velocity="3.1" />
+    <mimic
+      joint="lh_middle_mcp_pitch"
+      multiplier="1.125676"
+      offset="0" />
+  </joint>
+  <link
+    name="lh_ring_proximal">
+    <inertial>
+      <origin
+        xyz="0.001776 -0.00011 0.012556"
+        rpy="0 0 0" />
+      <mass
+        value="0.008553" />
+      <inertia
+        ixx="0.000000797543"
+        ixy="-0.000000001275"
+        ixz="0.000000138601"
+        iyy="0.000000800499"
+        iyz="0.000000000939"
+        izz="0.000000357001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_ring_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.00067368 0.010717 0.11822"
+      rpy="0 0 0" />
+    <parent
+      link="lh_hand_base_link" />
+    <child
+      link="lh_ring_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.134464"
+      effort="0.574"
+      velocity="6.10" />
+    <dynamics damping="0.01" friction="0.02291667"/>
+  </joint>
+  <link
+    name="lh_ring_distal">
+    <inertial>
+      <origin
+        xyz="0.0134 0.002262 0.016992"
+        rpy="0 0 0" />
+      <mass
+        value="0.018408" />
+      <inertia
+        ixx="0.000002488712"
+        ixy="0.000000008249"
+        ixz="-0.000001523059"
+        iyy="0.000003723754"
+        iyz="0.000000014019"
+        izz="0.000001813582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/ring_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh_ring_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_ring_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_ring_distal" />
+    <child
+      link="lh_ring_tip" />
+  </joint>
+  <joint
+    name="lh_ring_dip"
+    type="revolute">
+    <origin
+      xyz="0.00093749 0 0.028002"
+      rpy="0 0 0" />
+    <parent
+      link="lh_ring_proximal" />
+    <child
+      link="lh_ring_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.277039"
+      effort="0"
+      velocity="3.1" />
+    <mimic
+      joint="lh_ring_mcp_pitch"
+      multiplier="1.125676"
+      offset="0" />
+  </joint>
+  <link
+    name="lh_pinky_proximal">
+    <inertial>
+      <origin
+        xyz="0.001776 -0.00011 0.012556"
+        rpy="0 0 0" />
+      <mass
+        value="0.008553" />
+      <inertia
+        ixx="0.000000797543"
+        ixy="-0.000000001275"
+        ixz="0.000000138601"
+        iyy="0.000000800499"
+        iyz="0.000000000939"
+        izz="0.000000357001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_pinky_mcp_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.00067852 0.029814 0.11424"
+      rpy="0 0 0" />
+    <parent
+      link="lh_hand_base_link" />
+    <child
+      link="lh_pinky_proximal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.134464"
+      effort="0.574"
+      velocity="6.10" />
+    <dynamics damping="0.01" friction="0.01"/>
+  </joint>
+  <link
+    name="lh_pinky_distal">
+    <inertial>
+      <origin
+        xyz="0.0134 0.002262 0.016992"
+        rpy="0 0 0" />
+      <mass
+        value="0.018408" />
+      <inertia
+        ixx="0.000002488712"
+        ixy="0.000000008249"
+        ixz="-0.000001523059"
+        iyy="0.000003723754"
+        iyz="0.000000014019"
+        izz="0.000001813582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="meshes/pinky_distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh_pinky_tip">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1e-06" />
+      <inertia
+        ixx="1e-09"
+        ixy="0"
+        ixz="0"
+        iyy="1e-09"
+        iyz="0"
+        izz="1e-09" />
+    </inertial>
+  </link>
+  <joint
+    name="lh_pinky_tip_fixed"
+    type="fixed">
+    <origin
+      xyz="0.0341 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="lh_pinky_distal" />
+    <child
+      link="lh_pinky_tip" />
+  </joint>
+  <joint
+    name="lh_pinky_dip"
+    type="revolute">
+    <origin
+      xyz="0.00093749 0 0.028002"
+      rpy="0 0 0" />
+    <parent
+      link="lh_pinky_proximal" />
+    <child
+      link="lh_pinky_distal" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.277039"
+      effort="0"
+      velocity="3.1" />
+    <mimic
+      joint="lh_pinky_mcp_pitch"
+      multiplier="1.125676"
+      offset="0" />
+  </joint>
+  <transmission name="trans_thumb_cmc_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lh_thumb_cmc_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_thumb_cmc_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>0.0084</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_index_mcp_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lh_index_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_index_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>0.0082</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_middle_mcp_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lh_middle_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_middle_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>0.0082</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_ring_mcp_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lh_ring_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_ring_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>0.0082</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_pinky_mcp_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lh_pinky_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_pinky_mcp_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>0.0082</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="trans_thumb_cmc_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lh_thumb_cmc_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_thumb_cmc_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>0.0144</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <mujoco>
+    <compiler meshdir="meshes/" balanceinertia="true" discardvisual="false"/>
+    <default>
+      <joint armature="3.4707e-08" damping="5.0" frictionloss="0.5"/>
+    </default>
+    <equality>
+      <!-- 四指DIP关节的mimic约束 - 统一使用1.125676 -->
+      <!-- polycoef格式: c0 c1 c2 c3 c4 c5，关系: q1 = c0 + c1*q2 + c2*q2^2 + ... -->
+      <!-- 对于 mimic: q_dip = 0 + 1.125676*q_mcp + 0*q_mcp^2 + ... -->
+      <joint name="lh_couple_index" joint1="lh_index_dip" joint2="lh_index_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_middle" joint1="lh_middle_dip" joint2="lh_middle_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_ring" joint1="lh_ring_dip" joint2="lh_ring_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <joint name="lh_couple_pinky" joint1="lh_pinky_dip" joint2="lh_pinky_mcp_pitch" polycoef="0 1.125676 0 0 0 0"/>
+      <!-- 大拇指DIP关节的mimic约束 - 使用1.226495 -->
+      <joint name="lh_couple_thumb" joint1="lh_thumb_dip" joint2="lh_thumb_cmc_pitch" polycoef="0 1.226495 0 0 0 0"/>
+    </equality>
+  </mujoco>
+  <gazebo reference="lh_hand_base_link">
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="lh_thumb_distal">
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="lh_index_distal">
+    <mu1>1.1</mu1>
+    <mu2>1.1</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="lh_middle_distal">
+    <mu1>1.1</mu1>
+    <mu2>1.1</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="lh_ring_distal">
+    <mu1>1.1</mu1>
+    <mu2>1.1</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="lh_pinky_distal">
+    <mu1>1.1</mu1>
+    <mu2>1.1</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+</robot>

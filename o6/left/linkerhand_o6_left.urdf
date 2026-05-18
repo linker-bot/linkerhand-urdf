@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="linker_o6_left_v1.0_urdf">
+  name="linkerhand_o6_left">
   <material name="silver">
     <color rgba="0.5 0.5 0.52 1.0"/>
   </material>
