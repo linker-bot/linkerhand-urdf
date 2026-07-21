@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-  name="linkerhand_l20lite_left.urdf">
+<robot
+  name="linkerhand_l20lite_left">
   <link
     name="hand_base_link">
     <inertial>
