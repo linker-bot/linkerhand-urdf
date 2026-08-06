@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'thumb_cmc_roll', 'thumb_cmc_yaw', 'thumb_mcp', 'thumb_ip', 'index_mcp_roll', 'index_mcp_pitch', 'index_pip', 'index_dip', 'middle_mcp_roll', 'middle_mcp_pitch', 'middle_pip', 'middle_dip', 'ring_mcp_roll', 'ring_mcp_pitch', 'ring_pip', 'ring_dip', 'pinky_mcp_roll', 'pinky_mcp_pitch', 'pinky_pip', 'pinky_dip', ]

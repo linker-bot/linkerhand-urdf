@@ -1,1 +1,4 @@
 .DS_Store
+*.bak
+export.log
+.vscode/
